@@ -1,8 +1,8 @@
-name: Thank issue opener
+name: Thank issue closer
 
 on:
   issues:
-    types: opened
+    types: closed
 
 jobs:
   thank-opener:
@@ -10,7 +10,7 @@ jobs:
     permissions:
       issues: write
     steps:
-      - run: gh issue comment "$NUMBER" --body "Thanks for getting things started :sparkling_heart:"
+      - run: gh issue comment "$NUMBER" --body "Thanks for closing things out :broom:"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GH_REPO: ${{ github.repository }}
