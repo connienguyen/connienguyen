@@ -24,7 +24,7 @@ jobs:
       - name: Commit and push updated README
         uses: github-actions-x/commit@v2.9
         with:
-          github-token: ${{ secrest.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           push-branch: 'main'
           commit-message: 'Automated README.md update'
           files: README.md
