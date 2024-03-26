@@ -1,3 +1,5 @@
 I'm a product designer at GitHub.
 
-:octocat: :shaved_ice:
+It's 69&#8457; &#9728; in Los Angeles today
+
+:octocat::honey_pot:
