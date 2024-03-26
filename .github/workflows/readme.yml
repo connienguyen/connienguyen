@@ -25,5 +25,5 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           push-branch: 'main'
           commit-message: 'Automated README.md update'
+          force-add: 'true'
           files: README.md
-          force-push: true
