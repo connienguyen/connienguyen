@@ -1,0 +1,5 @@
+{
+    "hot" : ["icecream", "candy", "tangerine", "tropical_drink", "shaved_ice", "lollipop"],
+    "cold" : ["coffee", "tea", "ramen", "stew", "curry"],
+    "any" : ["pizza", "hamburger", "fries", "spaghetti", "rice_cracker", "cake", "chocolate_bar", "cookie", "dango", "cake", "doughnut", "honey_pot", "fried_shrimp"]
+}
