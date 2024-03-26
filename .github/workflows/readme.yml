@@ -1,9 +1,14 @@
 name: Update README
 
 on:
+  pull_request:
+    branches:
+      - 'main'
+    types:
+      - closed
   schedule:
-    # Every Monday
-    - cron: "0 0 * * MON"
+    # Everyday at 9am UTC
+    - cron: "0 8 * * *"
   workflow_dispatch:
 
 jobs:
