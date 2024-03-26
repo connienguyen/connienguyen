@@ -26,3 +26,4 @@ jobs:
           push-branch: 'main'
           commit-message: 'Automated README.md update'
           files: README.md
+          force-push: true
