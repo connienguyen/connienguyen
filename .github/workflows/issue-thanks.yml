@@ -1,0 +1,17 @@
+name: Thank issue opener
+
+on:
+  issues:
+    types: opened
+
+jobs:
+  thank-opener:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - run: gh issue comment "$NUMBER" --body "Thanks for getting things started :sparkling_heart:"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+          NUMBER: ${{ github.event.issue.number }}
