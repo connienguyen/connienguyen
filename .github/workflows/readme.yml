@@ -15,9 +15,8 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.2
         with:
-          node-version-file: package.json
-          cache: npm
-          cache-dependency-path: package-lock.json
+          node-version: 18.x
+      - run: npm install
       - name: Generate new README file
         run: node index.js
       - name: Commit and push updated README
