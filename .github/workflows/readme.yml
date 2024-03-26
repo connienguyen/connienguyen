@@ -23,7 +23,9 @@ jobs:
         uses: github-actions-x/commit@v2.9
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          push-branch: 'main'
-          commit-message: 'Automated README.md update'
-          force-add: 'true'
+          push-branch: "main"
+          commit-message: "Automated README.md update"
+          force-add: "true"
           files: README.md
+          name: Connie Nguyen
+          email: connienguyen@users.noreply.github.com
