@@ -2,8 +2,9 @@ name: Lint
 
 on:
   push:
-    branches-ignore: [main, master]
-  pull_request: null
+    branches-ignore: main
+  pull_request:
+    branches: main
 
 jobs:
   build:
