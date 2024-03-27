@@ -1,0 +1,16 @@
+name: Test workflow with inputs
+
+on:
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'Message to print'
+        default: 'Hello world'
+        required: true
+        type: string
+
+jobs:
+  parrot:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ${{ inputs.message }}
