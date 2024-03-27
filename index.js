@@ -34,7 +34,7 @@ const getWeather = async () => {
     }
     
     // Else return null if no daytime forecase is available
-    console.log("Could not retrieve daytime forecast");
+    console.log("Could not retrieve daytime forecast")
     return;
 }
 
@@ -75,7 +75,7 @@ const generateReadMe = async () => {
         }
         weatherString = "It's " + forecast.temperature + "\&#8457;" + extraIcon + " in Los Angeles today";
     }
-    
+
     const readMeData = {
         weather: weatherString,
         food: getFood(foodIndex)
