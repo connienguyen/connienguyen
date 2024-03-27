@@ -1,5 +1,5 @@
 I'm a product designer at GitHub.
 
-Today's weather is a mystery :crystal_ball:
+It's 68&#8457; in Los Angeles today
 
-:octocat::curry:
+:octocat::cookie:
