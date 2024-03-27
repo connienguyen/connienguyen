@@ -1,4 +1,4 @@
-name: Reusable build README
+name: README Build
 
 on:
   workflow_call:

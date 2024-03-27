@@ -1,4 +1,4 @@
-name: Scheduled update README
+name: README Schedule
 
 on:
   # Allow to run manually
