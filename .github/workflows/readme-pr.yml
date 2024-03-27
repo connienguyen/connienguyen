@@ -1,4 +1,4 @@
-name: README schedule
+name: README PR
 
 on:
   pull_request:
