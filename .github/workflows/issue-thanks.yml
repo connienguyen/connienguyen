@@ -5,7 +5,7 @@ on:
     types: opened
 
 jobs:
-  thank-opener:
+  comment-on-issue:
     runs-on: ubuntu-latest
     permissions:
       issues: write
