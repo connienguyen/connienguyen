@@ -3,7 +3,22 @@ const fs = require('fs');
 const FOOD_EMOJI = require('./food-emoji.json');
 const README_TEMPLATE = './readmeTemplate.mustache';
 
-// Retrieve weather information for Los Angeles
+/**
+ * Generate a random integer between min and max
+ * @param {Int} min 
+ * @param {Int} max 
+ * @returns Int random integer 
+ */
+const getRandomInt = (min, max) => {
+    const minCeiled = Math.ceil(min);
+    const maxFloored = Math.floor(max + 1);
+    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+}
+
+/**
+ * Retrieves current or upcoming daytime weather forecast for LA area from weather.gov
+ * @returns forecast Object or null
+ */
 const getWeather = async () => {
     const result = await fetch(
         `https://api.weather.gov/gridpoints/LOX/157,48/forecast`
@@ -15,12 +30,19 @@ const getWeather = async () => {
         // Cycle through forecasts until there is a daytime forecast
         for (const forecast of forecasts) {
             if (forecast.isDaytime) { return forecast; }
-            else { break; }
         }
-    } else { return; }
+    }
+    
+    // Else return null if no daytime forecase is available
+    console.log("Could not retrieve daytime forecast");
+    return;
 }
 
-// Based on temperature, randomly select an emoji food item
+/**
+ * Randomly selects a food item based on temperature
+ * @param {Int} temp 
+ * @returns String for food emoji name
+ */
 const getFood = (temp) => {
     let foods = [];
     if (temp > 90) {
@@ -34,11 +56,15 @@ const getFood = (temp) => {
     return foods[Math.floor(Math.random() * foods.length)];
 }
 
+/**
+ * Generates data for README file and writes to file
+ */
 const generateReadMe = async () => {
-    // Generate random number for README template if no temperature
-    let foodIndex = Math.floor(Math.random() * 100);
+    // Set default values in case no forecast is retrieved
+    let foodIndex = getRandomInt(40, 100);
     let weatherString = "Today's weather is a mystery :crystal_ball:";
     const forecast = await getWeather();
+
     if (forecast) {
         foodIndex = forecast.temperature;
         let extraIcon = "";
@@ -49,6 +75,7 @@ const generateReadMe = async () => {
         }
         weatherString = "It's " + forecast.temperature + "\&#8457;" + extraIcon + " in Los Angeles today";
     }
+    
     const readMeData = {
         weather: weatherString,
         food: getFood(foodIndex)
