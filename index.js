@@ -23,7 +23,7 @@ const getWeather = async () => {
   const result = await fetch(
     `https://api.weather.gov/gridpoints/LOX/157,48/forecast`
   )
-  .then(response => response.json())
+    .then(response => response.json())
 
   const forecasts = result.properties.periods
   if (Array.isArray(forecasts)) {
