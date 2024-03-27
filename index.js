@@ -70,7 +70,7 @@ const generateReadMe = async () => {
     let extraIcon = ''
     if (forecast.shortForecast === 'Sunny') {
         extraIcon = ' &#9728;'
-    } else if (forecast.shortForecast == 'Rain') {
+    } else if (forecast.shortForecast === 'Rain') {
         extraIcon = ' &#9730;'
     }
     weatherString = 'It\'s ' + forecast.temperature + '\&#8457;' + extraIcon + ' in Los Angeles today'
