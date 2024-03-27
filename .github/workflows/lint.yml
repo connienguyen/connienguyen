@@ -1,6 +1,9 @@
 name: Lint
 
 on:
+  push:
+    paths:
+      - '**.js'
   pull_request:
     types: [opened, reopened, edited]
 
@@ -24,5 +27,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_MARKDOWN: false
-      - run: standard --fix
           
