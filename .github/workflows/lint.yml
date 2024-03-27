@@ -1,8 +1,8 @@
 name: Lint
 
 on:
-  push: null
-  pull_request: null
+  pull_request:
+    types: [opened, reopened, edited]
 
 jobs:
   build:
