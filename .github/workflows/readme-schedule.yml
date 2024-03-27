@@ -9,4 +9,4 @@ on:
 
 jobs:
   start-build:
-    uses: connienguyen/connienguyen/.github/workflows/build-readme.yml@main
+    uses: ./.github/workflows/readme-build.yml
