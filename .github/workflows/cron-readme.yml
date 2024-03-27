@@ -1,0 +1,12 @@
+name: Scheduled update README
+
+on:
+  # Allow to run manually
+  workflow_dispatch:
+  # Run everyday at 9AM UTC
+  schedule:
+    - cron: "0 9 * * *"
+
+jobs:
+  start-build:
+    uses: .github/workflows/build-readme.yml@main
