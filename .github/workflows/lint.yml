@@ -2,9 +2,8 @@ name: Lint
 
 on:
   push:
-    branches-ignore: main
-  pull_request:
-    types: [opened, reopened]
+    branches-ignore: [main, master]
+  pull_request: null
 
 jobs:
   build:
