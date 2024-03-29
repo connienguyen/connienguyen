@@ -11,9 +11,12 @@ on:
 
 jobs:
   parrot:
+    strategy:
+      matrix:
+        message: ['Default message', '${{ inputs.message }}']
     runs-on: ubuntu-latest
     steps:
-      - run: echo ${{ inputs.message }}
+      - run: echo ${{ matrix.message }}
 
   complete:
     runs-on: ubuntu-latest
