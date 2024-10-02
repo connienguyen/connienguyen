@@ -1,5 +1,5 @@
 I'm a product designer at GitHub.
 
-It's 98&#8457; &#9728; in Los Angeles today
+It's 97&#8457; &#9728; in Los Angeles today
 
-:octocat::lollipop:
+:octocat::tropical_drink:
