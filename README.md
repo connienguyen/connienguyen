@@ -1,5 +1,5 @@
 I'm a product designer at GitHub.
 
-It's 58&#8457; in Los Angeles today
+It's 65&#8457; &#9728; in Los Angeles today
 
-:octocat::tea:
+:octocat::rice_cracker:
